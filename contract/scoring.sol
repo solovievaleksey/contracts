@@ -1,4 +1,4 @@
-//Sample contract
+//CScoring contract
 contract CScoring {
 	address private m_owner;
 	CBank[] m_banks;
