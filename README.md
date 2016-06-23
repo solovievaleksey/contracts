@@ -1,1 +1,2 @@
-# contracts
+# Contracts 
+Contracts for Ethereum.
