@@ -4,7 +4,7 @@ contract CScoring {
 	CBank[] m_banks;
 	
 	struct CBank {
-		bytes m_name;
+		string m_name;
 		address m_addr;
 		mapping (bytes32 => uint) m_scoring;
 	}
@@ -31,8 +31,8 @@ contract CScoring {
 		throw;
 	}
 	
-	function addBank(address addr, bytes name) onlyOwner public {
-		if (addr == 0x0 || name.length == 0) throw;
+	function addBank(address addr, string name) onlyOwner public {
+		if (addr == 0x0 || bytes(name).length == 0) throw;
 		m_banks.push(CBank({
 			m_name: name,
 			m_addr: addr
