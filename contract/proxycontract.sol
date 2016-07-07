@@ -20,7 +20,9 @@ contract CProxyImplementation is CProxyInterface {
 contract CProxyContract {
 	address private m_proxy;
 	
-	function CProxyContract() { }
+	function CProxyContract() {
+		m_proxy = 0;
+	}
 	
 	function setProxy(address addr) {
 		m_proxy = addr;
